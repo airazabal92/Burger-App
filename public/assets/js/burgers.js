@@ -26,7 +26,6 @@ $(function () {
 
     var newBurger = {
       burger_name: $("#bu").val().trim(),
-      // devoured: $("[name=devoured]:checked").val().trim(),
     };
 
     // Send the POST request.
@@ -39,17 +38,4 @@ $(function () {
       location.reload();
     });
   });
-
-  //   $(".delete-burger").on("click", function (event) {
-  //     var id = $(this).data("id");
-
-  //     // Send the DELETE request.
-  //     $.ajax("/api/cats/" + id, {
-  //       type: "DELETE",
-  //     }).then(function () {
-  //       console.log("deleted cat", id);
-  //       // Reload the page to get the updated list
-  //       location.reload();
-  //     });
-  //   });
 });

@@ -1,8 +1,10 @@
+// Dependencies
 const express = require("express");
 const burger = require("../models/burger.js");
 
 const router = express.Router();
 
+// Get all burgers
 router.get("/", function (req, res) {
   burger.all(function (data) {
     var burgerObj = {
@@ -13,13 +15,14 @@ router.get("/", function (req, res) {
   });
 });
 
+// Create burger
 router.post("/api/burgers", function (req, res) {
   burger.create(["burger_name"], [req.body.burger_name], function (result) {
-    // Send back the ID of the new quote
     res.json({ id: result.insertId });
   });
 });
 
+// Make burger devoured state
 router.put("/api/burgers/:id", function (req, res) {
   var condition = "id = " + req.params.id;
   burger.update(
@@ -36,5 +39,5 @@ router.put("/api/burgers/:id", function (req, res) {
     }
   );
 });
-
+// Export router
 module.exports = router;
