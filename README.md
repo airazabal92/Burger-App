@@ -6,7 +6,7 @@
 
 An application that uses the MVC design pattern to create a burger logger. The app uses Node and MySQL to query and route data and Handlebars to generate HTML. The user will be prompted for a burger that they would like to devour. Once the user submits their input, the burger will be added to the "To Be Eaten" list. Clicking on the "Devour" button will move the burger over to the "Devoured" section. The data is saved for the user to be able to reference which burgers are on their wish list and which have already been consumed.
 
-<img src="https://i.imgur.com/xAwOlLF.png">
+<img src="https://i.imgur.com/4Su2q0J.png">
 
 ## Table of Contents
 
